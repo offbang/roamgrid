@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Health Check — RoamGrid Digital Studio</title>
+  <meta name="description" content="Run a five-point Website Health Check: mobile layout, load speed, meta tags, SSL security, and CTA placement. Get a score, a prioritized issue list, and a one-tap fix request.">
+  <link rel="icon" href="assets/roamgrid-favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Apply the saved color theme before first paint (engine in js/main.js). */
+    try {
+      if (localStorage.getItem("rg-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body data-page="audit">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="RoamGrid Digital Studio — home">
+        <img src="assets/logo.svg" alt="RoamGrid Digital Studio" class="logo-img"
+             onerror="this.onerror=null;this.src='assets/roamgrid-logo-black.png';">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="why-you-need-a-website.html">Why a Website</a>
+        <a href="audit.html" aria-current="page">Audit Tool</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="currency-picker">
+          <label for="currency-select">Display currency</label>
+          <select id="currency-select" aria-label="Display currency">
+            <option value="UGX">UGX</option>
+            <option value="KES">KES</option>
+            <option value="RWF">RWF</option>
+            <option value="SSP">SSP</option>
+            <option value="ZAR">ZAR</option>
+            <option value="USD" selected>USD</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+          <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__knob"></span></span>
+          <span class="theme-toggle__label" aria-hidden="true">Dark</span>
+        </button>
+        <a class="btn btn--sm" href="contact.html">Start a Project</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======================================= PAGE HEAD =========== -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow eyebrow--line">Diagnostic Suite &middot; Five Checks</p>
+          <h1>Website Health Check</h1>
+          <p class="lede">
+            Enter your address and get a five-point read on how your site performs for
+            real visitors: mobile layout, load speed, meta tags, SSL security, and
+            call-to-action placement — scored, explained, and prioritized.
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="#scanner">Open the scanner</a>
+            <a class="btn btn--ghost" href="why-you-need-a-website.html">Why this matters</a>
+          </div>
+        </div>
+
+        <aside class="hero-meta reveal" aria-label="What we check">
+          <p class="eyebrow">Five-point scope</p>
+          <ul class="stack small muted">
+            <li><span class="mono">01</span> &mdash; Mobile Layout: viewport, fluid grids, tap targets</li>
+            <li><span class="mono">02</span> &mdash; Load Speed: payload, render path, media weight</li>
+            <li><span class="mono">03</span> &mdash; Meta Tags: titles, descriptions, social cards</li>
+            <li><span class="mono">04</span> &mdash; SSL Security: HTTPS coverage, redirects, headers</li>
+            <li><span class="mono">05</span> &mdash; CTA Placement: primary action, contact paths</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ======================================== SCANNER ============ -->
+    <section class="section" id="scanner">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--line">Scanner</p>
+          <h2>Run the check</h2>
+          <p class="muted">
+            No account, no install. Results appear below with a score breakdown and a
+            pre-filled hand-off you can send straight to the studio.
+          </p>
+        </div>
+
+        <div class="audit-shell">
+          <!-- Input panel -->
+          <div>
+            <form class="panel" id="audit-form" novalidate>
+              <div class="field" id="audit-url-field">
+                <label for="audit-url">Your website address</label>
+                <input type="text" id="audit-url" name="url" placeholder="yourbusiness.co.ug"
+                       autocomplete="url" spellcheck="false" required>
+                <span class="hint" id="audit-url-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="audit-contact">WhatsApp number or email</label>
+                <input type="text" id="audit-contact" name="contact" placeholder="+256 744 498583">
+                <span class="hint">Optional — only used if you send us the report.</span>
+              </div>
+
+              <button class="btn btn--block" type="submit" id="audit-run">Run Health Check</button>
+            </form>
+
+            <div class="panel">
+              <p class="eyebrow">How to read it</p>
+              <p class="small muted" style="margin-top:0.7rem;">
+                Scores run 0&ndash;100. <strong>85+</strong> is healthy, <strong>65&ndash;84</strong>
+                needs work, and <strong>below 65</strong> means visitors are likely leaving
+                before they contact you. Every issue comes with the fix, in order of damage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Scan run panel -->
+          <div>
+            <div class="panel">
+              <div class="scan-steps" aria-live="polite">
+                <div class="scan-step" data-name="Mobile Layout">
+                  <span class="glyph">·</span>
+                  <span>Mobile Layout</span>
+                  <span class="status">waiting</span>
+                </div>
+                <div class="scan-step" data-name="Load Speed">
+                  <span class="glyph">·</span>
+                  <span>Load Speed</span>
+                  <span class="status">waiting</span>
+                </div>
+                <div class="scan-step" data-name="Meta Tags">
+                  <span class="glyph">·</span>
+                  <span>Meta Tags</span>
+                  <span class="status">waiting</span>
+                </div>
+                <div class="scan-step" data-name="SSL Security">
+                  <span class="glyph">·</span>
+                  <span>SSL Security</span>
+                  <span class="status">waiting</span>
+                </div>
+                <div class="scan-step" data-name="CTA Placement">
+                  <span class="glyph">·</span>
+                  <span>CTA Placement</span>
+                  <span class="status">waiting</span>
+                </div>
+              </div>
+
+              <div class="scan-progress" aria-hidden="true"><i id="audit-bar"></i></div>
+              <div class="scan-meta">
+                <span id="audit-meta">Ready when you are.</span>
+                <span>5 checks</span>
+              </div>
+            </div>
+
+            <!-- =================================== RESULTS ========== -->
+            <div class="panel results" id="audit-results" hidden>
+              <div class="scoreboard">
+                <div class="ring" role="img" aria-label="Overall health score">
+                  <svg viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="track" cx="60" cy="60" r="50"></circle>
+                    <circle class="meter" id="audit-meter" cx="60" cy="60" r="50"></circle>
+                  </svg>
+                  <div class="value">
+                    <b id="audit-score">0</b>
+                    <span>of 100</span>
+                  </div>
+                </div>
+
+                <div class="score-verdict">
+                  <span class="verdict-chip is-warn" id="audit-verdict">Needs Work</span>
+                  <h3>Score breakdown</h3>
+                  <p class="mono small muted" id="audit-result-url"></p>
+                  <p class="mono small muted" id="audit-result-stamp"></p>
+                </div>
+              </div>
+
+              <div class="sub-scores" id="audit-subscores"></div>
+
+              <h4 style="margin-top:2rem;">Issues to fix — worst first</h4>
+              <div class="issue-list" id="audit-issues"></div>
+
+              <div class="results-actions">
+                <a class="btn btn-whatsapp" id="audit-fix-btn"                 href="https://wa.me/256744498583" target="_blank" rel="noopener">
+                  Fix These Issues With RoamGrid
+                </a>
+                <button class="btn btn--ghost" type="button" id="audit-reset">Scan another site</button>
+              </div>
+
+              <p class="audit-note" style="margin-top:1rem;">
+                The WhatsApp message arrives pre-filled with your URL, score, and top three
+                issues — reply with your availability and we will send back a fix plan and a
+                fixed quote.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================== WHAT HAPPENS =========== -->
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--line">After the scan</p>
+          <h2>From report to repair</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="service-card reveal">
+            <span class="idx">STEP 01</span>
+            <h3>You get the score</h3>
+            <p>
+              A single number, the five areas behind it, and an ordered list of what is
+              costing you visitors — written in plain language, not jargon.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="idx">STEP 02</span>
+            <h3>We confirm the real causes</h3>
+            <p>
+              The studio reviews your live site on real devices and networks, then replies
+              with what to fix first, what can wait, and what it costs.
+            </p>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="idx">STEP 03</span>
+            <h3>You choose the fix</h3>
+            <p>
+              Patch the critical issues, rebuild the whole surface, or take the
+              Single-Page Launch at <span data-usd="150">$150</span>. Your report, your call.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== CTA ============== -->
+    <section class="section" id="start">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Prefer a second opinion?</h2>
+            <p>
+              Send your URL through the contact page and a human will look at it —
+              no scanner, no score, just an honest read within one business day.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--on-dark" href="contact.html">Send my URL</a>
+            <a class="btn btn--ghost-on-dark" href="pricing.html">See Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ FOOTER =========== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/roamgrid-logo-white.png" alt="RoamGrid Digital Studio" class="logo-img" loading="lazy">
+          <p>
+            Handcrafted digital infrastructure for growing brands —
+            designed, engineered, and maintained from East Africa for the world.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="why-you-need-a-website.html">Why a Website</a></li>
+            <li><a href="audit.html">Audit Tool</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul>
+            <li><a href="pricing.html#tiers">Single-Page Launch</a></li>
+            <li><a href="pricing.html#tiers">Full Brand &amp; Web</a></li>
+            <li><a href="pricing.html#tiers">Custom Web App</a></li>
+            <li><a href="pricing.html#calculator">FX Calculator</a></li>
+            <li><a href="audit.html">Website Health Check</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">WhatsApp Booking</a></li>
+            <li><a href="https://wa.me/256744498583?text=Hello%20RoamGrid%20Digital%20Studio%2C%20I%27d%20like%20a%20quote." data-wa data-wa-text="Hello RoamGrid Digital Studio, I'd like a quote. I found you via {page}." target="_blank" rel="noopener">Direct WhatsApp chat</a></li>
+            <li><a href="mailto:roamgrid.studio@gmail.com">roamgrid.studio@gmail.com</a></li>
+            <li><a href="https://instagram.com/offbang.sk" target="_blank" rel="noopener">Instagram &middot; @offbang.sk</a></li>
+            <li><a href="https://x.com/offbang.sk" target="_blank" rel="noopener">X &middot; @offbang.sk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> RoamGrid Digital Studio</span>
+        <span>Built lean &middot; <a href="sitemap.xml">Sitemap</a> &middot; <a href="robots.txt">Robots</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/currency.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/audit.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoamGrid Digital Studio — Handcrafted Digital Infrastructure for Growing Brands</title>
+  <meta name="description" content="RoamGrid Digital Studio builds fast, high-trust websites for growing brands across East Africa and beyond. Handcrafted design, performance engineering, and clear pricing in your currency.">
+  <link rel="icon" href="assets/roamgrid-favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Apply the saved color theme before first paint (engine in js/main.js). */
+    try {
+      if (localStorage.getItem("rg-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="RoamGrid Digital Studio — home">
+        <img src="assets/logo.svg" alt="RoamGrid Digital Studio" class="logo-img"
+             onerror="this.onerror=null;this.src='assets/roamgrid-logo-black.png';">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="why-you-need-a-website.html">Why a Website</a>
+        <a href="audit.html">Audit Tool</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="currency-picker">
+          <label for="currency-select">Display currency</label>
+          <select id="currency-select" aria-label="Display currency">
+            <option value="UGX">UGX</option>
+            <option value="KES">KES</option>
+            <option value="RWF">RWF</option>
+            <option value="SSP">SSP</option>
+            <option value="ZAR">ZAR</option>
+            <option value="USD" selected>USD</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+          <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__knob"></span></span>
+          <span class="theme-toggle__label" aria-hidden="true">Dark</span>
+        </button>
+        <a class="btn btn--sm" href="contact.html">Start a Project</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ========================================== HERO ============== -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow eyebrow--line">RoamGrid Digital Studio &middot; Kampala &middot; Worldwide</p>
+          <h1>Handcrafted Digital Infrastructure for Growing Brands</h1>
+          <p class="lede">
+            We build sharp, fast-loading websites that turn attention into revenue —
+            engineered for mobile-first audiences, tuned for speed, and designed to convert
+            visitors into paying customers while you sleep.
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="pricing.html">Explore Packages</a>
+            <a class="btn btn--ghost" href="audit.html">Run Health Check</a>
+          </div>
+        </div>
+
+        <aside class="hero-meta reveal" aria-label="Studio snapshot">
+          <p class="eyebrow">Studio Snapshot</p>
+          <dl class="hero-stats">
+            <div>
+              <dt>&lt;1.2s</dt>
+              <dd>Median load</dd>
+            </div>
+            <div>
+              <dt>98</dt>
+              <dd>Perf. score</dd>
+            </div>
+            <div>
+              <dt>14d</dt>
+              <dd>Typical launch</dd>
+            </div>
+          </dl>
+          <p class="hero-note">
+            <span class="dot-live" aria-hidden="true"></span>
+            <span>
+              Pick your currency in the header — prices here and across the site
+              convert at <span class="mono" data-fx-status>reference rates</span>.
+            </span>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================================== FEATURED WORK ========== -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--line">Selected Work</p>
+            <h2>Builds that carry their weight</h2>
+            <p class="muted">
+              A sample of recent launches — storefronts, catalogues, and marketing sites
+              shipped lean and measured after launch.
+            </p>
+          </div>
+          <a class="link-arrow" href="pricing.html">See what a build costs &rarr;</a>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card work-card--wide reveal">
+            <div class="work-media">
+              <span class="work-tag">E-Commerce</span>
+              <div class="mock mock--grid-bg">
+                <div class="mock-bar"><i></i><i></i><i></i><u></u></div>
+                <div class="mock-body">
+                  <span class="mock-line mock-line--xl"></span>
+                  <span class="mock-line mock-line--w80"></span>
+                  <span class="mock-line mock-line--w55"></span>
+                  <div class="mock-cols"><span></span><span></span><span></span></div>
+                  <span class="mock-btn"></span>
+                </div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Nakawa Produce Market <span>2026 &middot; UGX</span></h3>
+              <p>
+                A WhatsApp-connected catalogue for a Kampala produce cooperative — bulk ordering,
+                mobile-money checkout, and a stock board the team updates from any phone.
+              </p>
+              <ul class="work-kpis">
+                <li>+212% order enquiries</li>
+                <li>0.9s LCP on 3G</li>
+                <li>Mobile money ready</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-media">
+              <span class="work-tag">Professional Services</span>
+              <div class="mock">
+                <div class="mock-bar"><i></i><i></i><i></i><u></u></div>
+                <div class="mock-body">
+                  <span class="mock-line mock-line--xl"></span>
+                  <span class="mock-line mock-line--w80"></span>
+                  <span class="mock-line"></span>
+                  <span class="mock-line mock-line--w35"></span>
+                  <span class="mock-btn"></span>
+                </div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Kasese Legal Chambers <span>2025 &middot; UGX</span></h3>
+              <p>
+                A single-page practice site with consultation booking, fee transparency,
+                and case-area pages that finally rank for local searches.
+              </p>
+              <ul class="work-kpis">
+                <li>Page-1 for 6 terms</li>
+                <li>3&times; consultation requests</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-media">
+              <span class="work-tag">Education</span>
+              <div class="mock">
+                <div class="mock-bar"><i></i><i></i><i></i><u></u></div>
+                <div class="mock-body">
+                  <span class="mock-line mock-line--w55"></span>
+                  <div class="mock-cols"><span></span><span></span><span></span></div>
+                  <span class="mock-line mock-line--w80"></span>
+                  <span class="mock-line mock-line--w35"></span>
+                  <span class="mock-btn"></span>
+                </div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>ExamCard Printers <span>2025 &middot; KES</span></h3>
+              <p>
+                A self-serve order flow for exam revision cards: pick a subject, upload a list,
+                pay by M-Pesa, and receive a print-ready proof the same day.
+              </p>
+              <ul class="work-kpis">
+                <li>62% fewer support chats</li>
+                <li>M-Pesa capture</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-media">
+              <span class="work-tag">Authors</span>
+              <div class="mock mock--grid-bg">
+                <div class="mock-bar"><i></i><i></i><i></i><u></u></div>
+                <div class="mock-body">
+                  <span class="mock-line mock-line--xl"></span>
+                  <span class="mock-line mock-line--w80"></span>
+                  <span class="mock-line mock-line--w55"></span>
+                  <span class="mock-line"></span>
+                  <span class="mock-btn"></span>
+                </div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>Heartlines Press <span>2026 &middot; KES</span></h3>
+              <p>
+                A launch site for a Nairobi author: sample chapters, bulk-school orders,
+                and a signed-copy preorder queue that holds during launch week spikes.
+              </p>
+              <ul class="work-kpis">
+                <li>1,400 preorders</li>
+                <li>Zero downtime at peak</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <div class="work-media">
+              <span class="work-tag">Hospitality</span>
+              <div class="mock">
+                <div class="mock-bar"><i></i><i></i><i></i><u></u></div>
+                <div class="mock-body">
+                  <span class="mock-line mock-line--w55"></span>
+                  <span class="mock-line mock-line--xl"></span>
+                  <div class="mock-cols"><span></span><span></span><span></span></div>
+                  <span class="mock-line mock-line--w80"></span>
+                  <span class="mock-btn"></span>
+                </div>
+              </div>
+            </div>
+            <div class="work-body">
+              <h3>RUZIZI Riverside Lodge <span>2025 &middot; USD</span></h3>
+              <p>
+                Direct bookings replacing a commission-heavy platform: room gallery,
+                season pricing, and a reservation request that lands in WhatsApp.
+              </p>
+              <ul class="work-kpis">
+                <li>&minus;41% commission spend</li>
+                <li>Direct bookings +87%</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================== SERVICES =========== -->
+    <section class="section section--alt" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--line">Capabilities</p>
+          <h2>Four disciplines, one standard</h2>
+          <p class="muted">
+            Every engagement is scoped, designed, and engineered in-house.
+            No templates resold, no page-builder debt. We build for small
+            businesses, authors, printers, schools, educational institutions,
+            and academy portals alike.
+          </p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="service-card reveal">
+            <span class="idx">01</span>
+            <h3>Handcrafted Web Design</h3>
+            <p>
+              Layouts drawn for your brand and content first — editorial typography,
+              deliberate hierarchy, and a system your team can extend.
+            </p>
+            <ul class="service-list">
+              <li>Custom art direction</li>
+              <li>Design tokens &amp; components</li>
+              <li>Accessibility baked in</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="idx">02</span>
+            <h3>Mobile Optimization</h3>
+            <p>
+              Designed at 360px first, then scaled up. Fluid grids, compressed media,
+              and tap targets that behave on real devices and networks.
+            </p>
+            <ul class="service-list">
+              <li>Mobile-first layouts</li>
+              <li>3G &amp; 4G performance budgets</li>
+              <li>Device QA on real hardware</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="idx">03</span>
+            <h3>E-Commerce &amp; WhatsApp Catalogs</h3>
+            <p>
+              Sell without a marketplace account: product catalogues, mobile-money
+              capture, and order flows that continue in WhatsApp.
+            </p>
+            <ul class="service-list">
+              <li>Catalogue &amp; cart builds</li>
+              <li>MTN, Airtel &amp; M-Pesa flows</li>
+              <li>WhatsApp order hand-off</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <span class="idx">04</span>
+            <h3>Performance Engineering</h3>
+            <p>
+              Speed is revenue. We set a performance budget at kickoff and defend it
+              through launch — measured on mid-tier phones, not lab machines.
+            </p>
+            <ul class="service-list">
+              <li>Core Web Vitals targets</li>
+              <li>Image &amp; font delivery</li>
+              <li>Post-launch monitoring</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="callout reveal" style="max-width:68ch;margin-top:2.25rem;">
+          <h4>For schools, educational institutions &amp; academy portals</h4>
+          <ul class="checklist" style="margin-top:0.75rem;">
+            <li>Candidate success card previews for admissions and marketing</li>
+            <li>Digital prospectus pages with courses, facilities, and term dates</li>
+            <li>School fee structure listings that stay current every term</li>
+            <li>Direct WhatsApp admissions and inquiry flows for parents</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================== PRICING PREVIEW ========== -->
+    <section class="section" id="packages">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--line">Transparent Pricing</p>
+            <h2>Fixed packages, live currency</h2>
+            <p class="muted">
+              Prices below update the moment you change the currency selector above.
+              Every package includes hosting setup, training, and 30 days of aftercare.
+            </p>
+          </div>
+          <span class="fx-status" data-fx-status>reference rates</span>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="price-card reveal">
+            <h3>Single-Page Launch</h3>
+            <p class="price-amount"><span data-usd="150">$150</span></p>
+            <p class="price-note">Base price &middot; one-time &middot; from 5 working days</p>
+            <ul class="price-features">
+              <li>One-page conversion site</li>
+              <li>Mobile-first responsive build</li>
+              <li>WhatsApp enquiry button</li>
+              <li>Basic SEO &amp; analytics</li>
+              <li class="is-off">Multi-page architecture</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="pricing.html#tiers">View full package</a>
+          </article>
+
+          <article class="price-card price-card--featured reveal">
+            <span class="price-flag">Most chosen</span>
+            <h3>Full Brand &amp; Web Package</h3>
+            <p class="price-amount"><span data-usd="350">$350</span></p>
+            <p class="price-note">Base price &middot; one-time &middot; from 10 working days</p>
+            <ul class="price-features">
+              <li>Up to 6 designed pages</li>
+              <li>Brand refresh &amp; logo suite</li>
+              <li>Copywriting for every page</li>
+              <li>Catalogue or booking flow</li>
+              <li>Performance budget &amp; training</li>
+            </ul>
+            <a class="btn btn--block" href="pricing.html#tiers">View full package</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Custom Web App &amp; E-Commerce</h3>
+            <p class="price-amount"><span data-usd="750">$750</span></p>
+            <p class="price-note">Base price &middot; one-time &middot; from 4 weeks</p>
+            <ul class="price-features">
+              <li>Storefront or custom logic</li>
+              <li>Mobile-money integrations</li>
+              <li>Accounts, dashboards, exports</li>
+              <li>Staging &amp; deployment pipeline</li>
+              <li>90 days priority support</li>
+            </ul>
+            <a class="btn btn--ghost btn--block" href="pricing.html#tiers">View full package</a>
+          </article>
+        </div>
+
+        <p class="small muted" style="margin-top:1.5rem;">
+          Not sure which fits? <a href="audit.html">Run the Health Check</a> first, or
+          <a href="contact.html">send a brief</a> and we will scope it within 24 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================== CTA ============== -->
+    <section class="section" id="start">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Your next customer is already searching.</h2>
+            <p>
+              Tell us what you sell and who you sell it to. We reply with a scope,
+              a fixed price, and a launch date — usually within one business day.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--on-dark" href="contact.html">Start a Project</a>
+            <a class="btn btn--ghost-on-dark" href="pricing.html">See Pricing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ FOOTER =========== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/roamgrid-logo-white.png" alt="RoamGrid Digital Studio" class="logo-img" loading="lazy">
+          <p>
+            Handcrafted digital infrastructure for growing brands —
+            designed, engineered, and maintained from East Africa for the world.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="why-you-need-a-website.html">Why a Website</a></li>
+            <li><a href="audit.html">Audit Tool</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul>
+            <li><a href="pricing.html#tiers">Single-Page Launch</a></li>
+            <li><a href="pricing.html#tiers">Full Brand &amp; Web</a></li>
+            <li><a href="pricing.html#tiers">Custom Web App</a></li>
+            <li><a href="pricing.html#calculator">FX Calculator</a></li>
+            <li><a href="audit.html">Website Health Check</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">WhatsApp Booking</a></li>
+            <li><a href="https://wa.me/256744498583?text=Hello%20RoamGrid%20Digital%20Studio%2C%20I%27d%20like%20a%20quote." data-wa data-wa-text="Hello RoamGrid Digital Studio, I'd like a quote. I found you via {page}." target="_blank" rel="noopener">Direct WhatsApp chat</a></li>
+            <li><a href="mailto:roamgrid.studio@gmail.com">roamgrid.studio@gmail.com</a></li>
+            <li><a href="https://instagram.com/offbang.sk" target="_blank" rel="noopener">Instagram &middot; @offbang.sk</a></li>
+            <li><a href="https://x.com/offbang.sk" target="_blank" rel="noopener">X &middot; @offbang.sk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> RoamGrid Digital Studio</span>
+        <span>Built lean &middot; <a href="sitemap.xml">Sitemap</a> &middot; <a href="robots.txt">Robots</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/currency.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

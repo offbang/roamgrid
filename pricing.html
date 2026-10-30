@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing &amp; Live Currency Calculator — RoamGrid Digital Studio</title>
+  <meta name="description" content="Transparent package pricing for RoamGrid Digital Studio: Single-Page Launch from $150, Full Brand &amp; Web from $350, Custom Web App from $750 — with a live forex converter for UGX, KES, RWF, SSP, ZAR, USD and GBP.">
+  <link rel="icon" href="assets/roamgrid-favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Apply the saved color theme before first paint (engine in js/main.js). */
+    try {
+      if (localStorage.getItem("rg-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body data-page="pricing">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="RoamGrid Digital Studio — home">
+        <img src="assets/logo.svg" alt="RoamGrid Digital Studio" class="logo-img"
+             onerror="this.onerror=null;this.src='assets/roamgrid-logo-black.png';">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="why-you-need-a-website.html">Why a Website</a>
+        <a href="audit.html">Audit Tool</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="currency-picker">
+          <label for="currency-select">Display currency</label>
+          <select id="currency-select" aria-label="Display currency">
+            <option value="UGX">UGX</option>
+            <option value="KES">KES</option>
+            <option value="RWF">RWF</option>
+            <option value="SSP">SSP</option>
+            <option value="ZAR">ZAR</option>
+            <option value="USD" selected>USD</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+          <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__knob"></span></span>
+          <span class="theme-toggle__label" aria-hidden="true">Dark</span>
+        </button>
+        <a class="btn btn--sm" href="contact.html">Start a Project</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======================================= PAGE HEAD =========== -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow eyebrow--line">Fixed Scope &middot; Fixed Price</p>
+          <h1>Pricing you can plan around</h1>
+          <p class="lede">
+            Three packages, one currency switcher. Change the selector in the header and
+            every price on this page — and across the site — converts instantly at live
+            exchange rates. No discovery call required to see a number.
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="#tiers">Compare packages</a>
+            <a class="btn btn--ghost" href="#calculator">Convert a price</a>
+          </div>
+        </div>
+
+        <aside class="hero-meta reveal" aria-label="Rate information">
+          <p class="eyebrow">Exchange rates</p>
+          <p class="hero-note">
+            <span class="dot-live" aria-hidden="true"></span>
+            <span>
+              <strong data-fx-status>reference rates</strong><br>
+              Fetched from a public forex endpoint on load, with your last good rates
+              cached locally as an offline fallback.
+            </span>
+          </p>
+          <p class="small muted">
+            Supported: UGX &middot; KES &middot; RWF &middot; SSP &middot; ZAR &middot; USD &middot; GBP
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========================================== TIERS ============ -->
+    <section class="section" id="tiers">
+      <div class="wrap">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow eyebrow--line">Packages</p>
+            <h2>Pick the surface area</h2>
+            <p class="muted">
+              Each package is a fixed scope with a fixed base price. Content, integrations,
+              and multi-language needs are quoted on top — always before we start.
+              Built for small businesses, authors, printers, schools, educational
+              institutions, and academy portals alike.
+            </p>
+          </div>
+          <span class="fx-status" data-fx-status>reference rates</span>
+        </div>
+
+        <div class="payment-notice reveal" role="note" aria-label="Payment notice">
+          <span class="payment-notice__label">Payments</span>
+          <p>
+            We are unable to process direct bank transfers at the moment.
+            Payments are accepted via Mobile Money to
+            <a class="mono" href="tel:+256744498583">+256 744 498583</a>.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Tier 1 -->
+          <article class="price-card reveal">
+            <h3>Single-Page Launch</h3>
+            <p class="price-amount"><span data-usd="150">$150</span></p>
+            <p class="price-note">Base &middot; one-time &middot; from 5 working days</p>
+            <p class="small muted">
+              For traders, vendors, and first-time owners who need one sharp page that
+              converts.
+            </p>
+            <ul class="price-features">
+              <li>One conversion-focused page</li>
+              <li>Mobile-first responsive build</li>
+              <li>WhatsApp / call CTA, one tap away</li>
+              <li>Basic SEO: title, description, sitemap</li>
+              <li>Analytics installed and verified</li>
+              <li>Hosting setup + 15-min handover</li>
+              <li class="is-off">Multi-page architecture</li>
+              <li class="is-off">Brand identity work</li>
+            </ul>
+            <a class="btn btn--ghost btn--block"
+               href="contact.html?package=Single-Page%20Launch">Choose Launch</a>
+          </article>
+
+          <!-- Tier 2 -->
+          <article class="price-card price-card--featured reveal">
+            <span class="price-flag">Most chosen</span>
+            <h3>Full Brand &amp; Web Package</h3>
+            <p class="price-amount"><span data-usd="350">$350</span></p>
+            <p class="price-note">Base &middot; one-time &middot; from 10 working days</p>
+            <p class="small muted" style="color:var(--on-dark-soft);">
+              For established businesses, schools, and institutions ready to look as credible as they are.
+            </p>
+            <ul class="price-features">
+              <li>Up to 6 designed pages</li>
+              <li>Brand refresh: logo suite, palette, type</li>
+              <li>Copywriting for every page</li>
+              <li>Catalogue, booking, or enquiry flow</li>
+              <li>Mobile money payment instructions</li>
+              <li>Performance budget enforced</li>
+              <li>Team training session + 30 days aftercare</li>
+              <li>Quarterly check-in for 1 year</li>
+            </ul>
+            <a class="btn btn--block"
+               href="contact.html?package=Full%20Brand%20%26%20Web%20Package">Choose Brand &amp; Web</a>
+          </article>
+
+          <!-- Tier 3 -->
+          <article class="price-card reveal">
+            <h3>Custom Web App &amp; E-Commerce</h3>
+            <p class="price-amount"><span data-usd="750">$750</span></p>
+            <p class="price-note">Base &middot; one-time &middot; from 4 weeks</p>
+            <p class="small muted">
+              For sellers and operators who need accounts, carts, and custom logic.
+            </p>
+            <ul class="price-features">
+              <li>Storefront or custom application logic</li>
+              <li>Mobile-money &amp; card integrations</li>
+              <li>Customer accounts, dashboards, exports</li>
+              <li>Order notifications to WhatsApp</li>
+              <li>Staging environment + deployment pipeline</li>
+              <li>Admin training and documentation</li>
+              <li>90 days priority support</li>
+              <li class="is-off">Native mobile apps</li>
+            </ul>
+            <a class="btn btn--ghost btn--block"
+               href="contact.html?package=Custom%20Web%20App%20%26%20E-Commerce">Choose Custom</a>
+          </article>
+        </div>
+
+        <p class="small muted center-x text-center" style="margin-top:1.75rem;max-width:60ch;">
+          All packages include responsive builds, launch QA on real devices, and a
+          documented handover. Hosting and domain fees are passed through at cost —
+          typically <span data-usd="40">$40</span> or less per year.
+        </p>
+
+        <div class="callout reveal" style="max-width:64ch;margin:1.75rem auto 0;">
+          <h4>For schools, educational institutions &amp; academy portals</h4>
+          <p>
+            Candidate success card previews, digital prospectus pages, school fee
+            structure listings, and direct WhatsApp admissions and inquiry flows —
+            scoped into any package at a fixed price.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================== COMPARISON TABLE ========= -->
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--line">Side by side</p>
+          <h2>What changes between tiers</h2>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col">Capability</th>
+                <th scope="col">Single-Page</th>
+                <th scope="col">Brand &amp; Web</th>
+                <th scope="col">Custom App</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pages / screens</td>
+                <td>1</td>
+                <td>Up to 6</td>
+                <td>Unlimited, scoped</td>
+              </tr>
+              <tr>
+                <td>Mobile-first build</td>
+                <td class="is-yes">Yes</td>
+                <td class="is-yes">Yes</td>
+                <td class="is-yes">Yes</td>
+              </tr>
+              <tr>
+                <td>WhatsApp enquiry flow</td>
+                <td class="is-yes">Yes</td>
+                <td class="is-yes">Yes</td>
+                <td class="is-yes">Yes</td>
+              </tr>
+              <tr>
+                <td>Brand identity work</td>
+                <td class="is-no">—</td>
+                <td class="is-yes">Included</td>
+                <td class="is-yes">Included</td>
+              </tr>
+              <tr>
+                <td>Product catalogue &amp; cart</td>
+                <td class="is-no">—</td>
+                <td>Optional add-on</td>
+                <td class="is-yes">Yes</td>
+              </tr>
+              <tr>
+                <td>Mobile-money integration</td>
+                <td class="is-no">—</td>
+                <td>Payment instructions</td>
+                <td class="is-yes">Automated</td>
+              </tr>
+              <tr>
+                <td>Accounts &amp; dashboards</td>
+                <td class="is-no">—</td>
+                <td class="is-no">—</td>
+                <td class="is-yes">Yes</td>
+              </tr>
+              <tr>
+                <td>Copywriting</td>
+                <td>Headline + sections</td>
+                <td class="is-yes">Every page</td>
+                <td class="is-yes">Every screen</td>
+              </tr>
+              <tr>
+                <td>Aftercare</td>
+                <td>15 days</td>
+                <td>30 days + quarterly</td>
+                <td>90 days priority</td>
+              </tr>
+              <tr>
+                <td>Typical timeline</td>
+                <td>5 working days</td>
+                <td>10 working days</td>
+                <td>4 weeks+</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================== FX CALCULATOR =========== -->
+    <section class="section" id="calculator">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--line">Live Forex</p>
+          <h2>Currency calculator</h2>
+          <p class="muted">
+            Enter any amount in your currency and see it in all seven, at the same rates
+            that price the packages above.
+          </p>
+        </div>
+
+        <div class="fx-panel reveal">
+          <div class="fx-field">
+            <label for="fx-amount">Amount</label>
+            <div class="fx-input-row">
+              <input type="number" id="fx-amount" data-fx-source-input value="150" min="1" step="1"
+                     inputmode="decimal" aria-describedby="fx-hint">
+              <select id="fx-from" data-fx-from aria-label="Source currency">
+                <option value="UGX">UGX</option>
+                <option value="KES">KES</option>
+                <option value="RWF">RWF</option>
+                <option value="SSP">SSP</option>
+                <option value="ZAR">ZAR</option>
+                <option value="USD" selected>USD</option>
+                <option value="GBP">GBP</option>
+              </select>
+            </div>
+            <span class="small muted" id="fx-hint">
+              Converted into <strong>the currency selected in the header</strong>.
+              Change the header selector to switch the target.
+            </span>
+
+            <p class="small muted" style="margin-top:1rem;">
+              Rates: <span class="mono" data-fx-status>reference rates</span>
+            </p>
+          </div>
+
+          <div class="fx-output">
+            <span class="eyebrow">Converted total</span>
+            <span class="converted" data-fx-result>$150</span>
+            <span class="small muted">Base: <span class="mono" id="fx-base-label">USD</span> &middot; updates live</span>
+
+            <ul class="fx-rates" data-fx-table aria-label="Converted value in each supported currency"></ul>
+          </div>
+        </div>
+
+        <div class="grid grid--3" style="margin-top:2rem;">
+          <div class="callout reveal">
+            <h4>Pay in your currency</h4>
+            <p>
+              Invoices are issued in USD, but we quote and accept payment in UGX, KES,
+              RWF, SSP, ZAR, or GBP at the day's rate — MTN, Airtel, or M-Pesa mobile money.
+            </p>
+          </div>
+          <div class="callout reveal">
+            <h4>No rate surprises</h4>
+            <p>
+              Your quoted figure is locked for 7 days from issue. If a market moves hard
+              in that window, we absorb it — you do not re-quote mid-project.
+            </p>
+          </div>
+          <div class="callout reveal">
+            <h4>Staged payments</h4>
+            <p>
+              50% to begin, 50% at launch for standard packages. Custom apps bill against
+              agreed milestones instead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== FAQ ============== -->
+    <section class="section section--alt" id="faq">
+      <div class="wrap wrap--narrow">
+        <div class="section-head text-center center-x">
+          <p class="eyebrow">Common questions</p>
+          <h2>Before you book</h2>
+        </div>
+
+        <div class="stack">
+          <details class="callout">
+            <h4>Is the base price the final price?</h4>
+            <p>
+              For the scope listed, yes. Anything outside scope — extra pages, bespoke
+              integrations, large content migrations — is quoted in writing before work
+              begins. We do not issue surprise invoices.
+            </p>
+          </details>
+
+          <details class="callout">
+            <h4>Which payment methods do you accept?</h4>
+            <p>
+              MTN Mobile Money, Airtel Money, and M-Pesa to +256 744 498583. International
+              cards via invoice for GBP and ZAR clients. Direct bank transfers are
+              unavailable at the moment.
+            </p>
+          </details>
+
+          <details class="callout">
+            <h4>Do you work with clients outside East Africa?</h4>
+            <p>
+              Regularly. The studio runs on East Africa Time with overlap hours for
+              European and Gulf time zones; async updates land in email or WhatsApp
+              daily either way.
+            </p>
+          </details>
+
+          <details class="callout">
+            <h4>What happens after launch?</h4>
+            <p>
+              Every package includes aftercare — a defined window of free fixes and
+              questions. Beyond that, optional care plans cover updates, backups, and
+              small content changes monthly.
+            </p>
+          </details>
+
+          <details class="callout">
+            <h4>How current are the exchange rates?</h4>
+            <p>
+              The site fetches live rates on load from a public forex endpoint and caches
+              the last good result. If you are offline, cached or reference rates are
+              used and labeled as such in the header notes.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== CTA ============== -->
+    <section class="section" id="start">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Know the number. Pick the date.</h2>
+            <p>
+              Send your package choice and a line about your business — you get a scope,
+              a fixed price, and available start dates back within one business day.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--on-dark" href="contact.html">Request a Quote</a>
+            <a class="btn btn--ghost-on-dark" href="audit.html">Run Health Check first</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ FOOTER =========== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/roamgrid-logo-white.png" alt="RoamGrid Digital Studio" class="logo-img" loading="lazy">
+          <p>
+            Handcrafted digital infrastructure for growing brands —
+            designed, engineered, and maintained from East Africa for the world.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="why-you-need-a-website.html">Why a Website</a></li>
+            <li><a href="audit.html">Audit Tool</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul>
+            <li><a href="pricing.html#tiers">Single-Page Launch</a></li>
+            <li><a href="pricing.html#tiers">Full Brand &amp; Web</a></li>
+            <li><a href="pricing.html#tiers">Custom Web App</a></li>
+            <li><a href="pricing.html#calculator">FX Calculator</a></li>
+            <li><a href="audit.html">Website Health Check</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">WhatsApp Booking</a></li>
+            <li><a href="https://wa.me/256744498583?text=Hello%20RoamGrid%20Digital%20Studio%2C%20I%27d%20like%20a%20quote." data-wa data-wa-text="Hello RoamGrid Digital Studio, I'd like a quote. I found you via {page}." target="_blank" rel="noopener">Direct WhatsApp chat</a></li>
+            <li><a href="mailto:roamgrid.studio@gmail.com">roamgrid.studio@gmail.com</a></li>
+            <li><a href="https://instagram.com/offbang.sk" target="_blank" rel="noopener">Instagram &middot; @offbang.sk</a></li>
+            <li><a href="https://x.com/offbang.sk" target="_blank" rel="noopener">X &middot; @offbang.sk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> RoamGrid Digital Studio</span>
+        <span>Built lean &middot; <a href="sitemap.xml">Sitemap</a> &middot; <a href="robots.txt">Robots</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/currency.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

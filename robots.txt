@@ -1,0 +1,26 @@
+# robots.txt — RoamGrid Digital Studio
+# https://roamgrid.studio/
+
+User-agent: *
+Allow: /
+
+# Public pages
+Allow: /index.html
+Allow: /why-you-need-a-website.html
+Allow: /audit.html
+Allow: /pricing.html
+Allow: /contact.html
+
+# Public assets and static resources
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# No crawl budget spent on generated or private files
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /tmp/
+
+Sitemap: https://roamgrid.studio/sitemap.xml

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Booking — RoamGrid Digital Studio</title>
+  <meta name="description" content="Start a project with RoamGrid Digital Studio. Book directly on WhatsApp with a pre-formatted brief, send an inquiry form, or pay with MTN, Airtel, or M-Pesa mobile money.">
+  <link rel="icon" href="assets/roamgrid-favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Apply the saved color theme before first paint (engine in js/main.js). */
+    try {
+      if (localStorage.getItem("rg-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================================ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="RoamGrid Digital Studio — home">
+        <img src="assets/logo.svg" alt="RoamGrid Digital Studio" class="logo-img"
+             onerror="this.onerror=null;this.src='assets/roamgrid-logo-black.png';">
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="why-you-need-a-website.html">Why a Website</a>
+        <a href="audit.html">Audit Tool</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="header-tools">
+        <div class="currency-picker">
+          <label for="currency-select">Display currency</label>
+          <select id="currency-select" aria-label="Display currency">
+            <option value="UGX">UGX</option>
+            <option value="KES">KES</option>
+            <option value="RWF">RWF</option>
+            <option value="SSP">SSP</option>
+            <option value="ZAR">ZAR</option>
+            <option value="USD" selected>USD</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark mode">
+          <span class="theme-toggle__track" aria-hidden="true"><span class="theme-toggle__knob"></span></span>
+          <span class="theme-toggle__label" aria-hidden="true">Dark</span>
+        </button>
+        <a class="btn btn--sm" href="#inquiry">Start a Project</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======================================= PAGE HEAD =========== -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <p class="eyebrow eyebrow--line">Replies within one business day</p>
+          <h1>Start the conversation</h1>
+          <p class="lede">
+            Two ways in: book a direct WhatsApp chat with your brief already typed out,
+            or fill the inquiry form and we come back with scope, price, and start dates.
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="https://wa.me/256744498583?text=Hello%20RoamGrid%20Digital%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project."
+               data-wa
+               data-wa-text="Hello RoamGrid Digital Studio, I'd like to discuss a project. I found you from {page}."
+               target="_blank" rel="noopener">Book on WhatsApp</a>
+            <a class="btn btn--ghost" href="#inquiry">Send an inquiry</a>
+          </div>
+        </div>
+
+        <aside class="hero-meta reveal" aria-label="Studio availability">
+          <p class="eyebrow">Availability</p>
+          <p class="hero-note">
+            <span class="dot-live" aria-hidden="true"></span>
+            <span><strong>2 build slots open</strong> for this month. Rush work quoted on request.</span>
+          </p>
+          <div class="contact-line">
+            <span class="k">Hours</span>
+            <span>Mon–Sat &middot; 08:00–18:00 EAT</span>
+          </div>
+          <div class="contact-line">
+            <span class="k">Email</span>
+            <a href="mailto:roamgrid.studio@gmail.com">roamgrid.studio@gmail.com</a>
+          </div>
+          <div class="contact-line">
+            <span class="k">Social</span>
+            <span class="mono">@offbang.sk</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ======================================== CONTACT ============ -->
+    <section class="section" id="inquiry">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--line">Direct booking &amp; inquiry</p>
+          <h2>Tell us what you are building</h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: direct channels -->
+          <div>
+            <div class="contact-card reveal">
+              <p class="eyebrow">WhatsApp booking</p>
+              <h3>Fastest route to a quote</h3>
+              <p class="small muted">
+                The button opens a chat with your project details pre-formatted —
+                business name, what you need, and the package you looked at.
+              </p>
+              <a class="btn btn--block"
+                 href="https://wa.me/256744498583?text=Hello%20RoamGrid%20Digital%20Studio%2C%20I%27d%20like%20a%20quote."
+                 data-wa
+                 data-wa-text="Hello RoamGrid Digital Studio — project inquiry
+
+Business: 
+Location: 
+What I need: 
+Package of interest: 
+Ideal launch date: 
+
+Found you via: {page}"
+                 target="_blank" rel="noopener">Open WhatsApp chat</a>
+              <p class="small muted mono">+256 744 498583 &middot; Mon–Sat, 08:00–18:00 EAT</p>
+            </div>
+
+            <div class="contact-card reveal">
+              <p class="eyebrow">Payment methods</p>
+              <h3>Pay how you already pay</h3>
+              <div class="pay-badges">
+                <span class="pay-badge"><i aria-hidden="true"></i>MTN Mobile Money</span>
+                <span class="pay-badge"><i aria-hidden="true"></i>Airtel Money</span>
+                <span class="pay-badge"><i aria-hidden="true"></i>M-Pesa</span>
+              </div>
+              <p class="small muted">
+                Deposit terms: 50% to begin, 50% at launch. Custom applications bill
+                against milestones. Invoices issued in USD, payable in your local currency.
+              </p>
+            </div>
+
+            <div class="contact-card reveal">
+              <p class="eyebrow">Not ready yet?</p>
+              <p class="small muted">
+                Run the <a href="audit.html">Website Health Check</a> first — it takes
+                seconds and gives us a shared starting point when you do write in.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: inquiry form -->
+          <div class="contact-card reveal">
+            <p class="eyebrow">Inquiry form</p>
+            <h3>Send a brief</h3>
+            <p class="small muted">
+              Works as a plain form — wire it to Web3Forms or Formspree via the
+              <span class="mono">data-endpoint</span> attribute on the form, or leave it
+              as-is and the brief continues in WhatsApp.
+            </p>
+
+            <form id="inquiry-form" novalidate data-endpoint="">
+              <div class="form-grid-2">
+                <div class="field">
+                  <label for="f-name">Your name *</label>
+                  <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Jane Achieng" required>
+                </div>
+                <div class="field">
+                  <label for="f-email">Email *</label>
+                  <input type="email" id="f-email" name="email" autocomplete="email" placeholder="you@business.co.ug" required>
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="field">
+                  <label for="f-business">Business / project</label>
+                  <input type="text" id="f-business" name="business" placeholder="Kasese Legal Chambers">
+                </div>
+                <div class="field">
+                  <label for="f-phone">WhatsApp number</label>
+                  <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+256 744 498583">
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="field">
+                  <label for="f-package">Package of interest</label>
+                  <select id="f-package" name="package">
+                    <option value="">Not sure yet</option>
+                    <option value="Single-Page Launch">Single-Page Launch — from $150</option>
+                    <option value="Full Brand &amp; Web Package">Full Brand &amp; Web Package — from $350</option>
+                    <option value="Custom Web App &amp; E-Commerce">Custom Web App &amp; E-Commerce — from $750</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="f-budget">Budget range</label>
+                  <select id="f-budget" name="budget">
+                    <option value="">Prefer to discuss</option>
+                    <option value="Under $200">Under $200</option>
+                    <option value="$200 – $400">$200 – $400</option>
+                    <option value="$400 – $800">$400 – $800</option>
+                    <option value="$800+">$800+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-message">What do you need? *</label>
+                <textarea id="f-message" name="message" placeholder="A shop site for our hardware store in Ntinda — catalogue, WhatsApp orders, and mobile money instructions. Ideally live before month-end." required></textarea>
+              </div>
+
+              <label class="checkbox-line" for="f-consent">
+                <input type="checkbox" id="f-consent" name="consent" checked>
+                <span>Reply to me on WhatsApp or email about this inquiry. No mailing lists, ever.</span>
+              </label>
+
+              <button class="btn btn--block" type="submit">Send inquiry</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================== WHAT HAPPENS ============ -->
+    <section class="section section--alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--line">What happens next</p>
+          <h2>From first message to launch date</h2>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="service-card reveal">
+            <span class="idx">01</span>
+            <h3>We reply</h3>
+            <p>Within one business day with clarifying questions — or a scope if your brief was already clear.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="idx">02</span>
+            <h3>Fixed quote</h3>
+            <p>Scope, price in your currency, timeline, and milestone schedule — in writing before anything starts.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="idx">03</span>
+            <h3>Build &amp; review</h3>
+            <p>Design first, then build. You review on a staging link with two structured feedback rounds included.</p>
+          </article>
+          <article class="service-card reveal">
+            <span class="idx">04</span>
+            <h3>Launch &amp; handover</h3>
+            <p>We ship, verify on real devices, and hand over logins, docs, and a training recording.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== CTA ============== -->
+    <section class="section" id="start">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Still weighing it up?</h2>
+            <p>
+              Read <a href="why-you-need-a-website.html" style="color:var(--on-dark);">why a website earns its keep</a>
+              or check what your current site is costing you with the
+              <a href="audit.html" style="color:var(--on-dark);">Health Check</a>.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--on-dark" href="pricing.html">See Pricing</a>
+            <a class="btn btn--ghost-on-dark" href="audit.html">Run Health Check</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================ FOOTER =========== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/roamgrid-logo-white.png" alt="RoamGrid Digital Studio" class="logo-img" loading="lazy">
+          <p>
+            Handcrafted digital infrastructure for growing brands —
+            designed, engineered, and maintained from East Africa for the world.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="why-you-need-a-website.html">Why a Website</a></li>
+            <li><a href="audit.html">Audit Tool</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Packages</h4>
+          <ul>
+            <li><a href="pricing.html#tiers">Single-Page Launch</a></li>
+            <li><a href="pricing.html#tiers">Full Brand &amp; Web</a></li>
+            <li><a href="pricing.html#tiers">Custom Web App</a></li>
+            <li><a href="pricing.html#calculator">FX Calculator</a></li>
+            <li><a href="audit.html">Website Health Check</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">WhatsApp Booking</a></li>
+            <li><a href="https://wa.me/256744498583?text=Hello%20RoamGrid%20Digital%20Studio%2C%20I%27d%20like%20a%20quote." data-wa data-wa-text="Hello RoamGrid Digital Studio, I'd like a quote. I found you via {page}." target="_blank" rel="noopener">Direct WhatsApp chat</a></li>
+            <li><a href="mailto:roamgrid.studio@gmail.com">roamgrid.studio@gmail.com</a></li>
+            <li><a href="https://instagram.com/offbang.sk" target="_blank" rel="noopener">Instagram &middot; @offbang.sk</a></li>
+            <li><a href="https://x.com/offbang.sk" target="_blank" rel="noopener">X &middot; @offbang.sk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> RoamGrid Digital Studio</span>
+        <span>Built lean &middot; <a href="sitemap.xml">Sitemap</a> &middot; <a href="robots.txt">Robots</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/currency.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
